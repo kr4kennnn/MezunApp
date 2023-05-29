@@ -1,0 +1,423 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport = "true">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:context=".RegisterActivity">
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="50dp"
+            android:layout_marginBottom="10dp"
+            android:gravity="center"
+            android:shadowColor="#000000"
+            android:shadowDx="2.5"
+            android:shadowDy="2.5"
+            android:shadowRadius="2.5"
+            android:text="Hesap Bilgileri"
+            android:textColor="@color/white"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/photo"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_below="@id/title"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="#50ffffff"
+            android:scaleType="centerCrop"
+            android:src="@drawable/baseline_person_24" />
+
+        <TextView
+            android:id="@+id/editpp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/photo"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="20dp"
+            android:gravity="center"
+            android:shadowColor="#000000"
+            android:shadowDx="2.5"
+            android:shadowDy="2.5"
+            android:shadowRadius="2.5"
+            android:text="Fotoğraf yükle"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            app:drawableStartCompat="@drawable/baseline_edit_24"/>
+
+        <EditText
+            android:id="@+id/name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/editpp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:autofillHints="name"
+            android:background="#30ffffff"
+            android:drawableStart="@drawable/baseline_person_24"
+            android:drawablePadding="15dp"
+            android:hint="İsim"
+            android:inputType="textPersonName"
+            android:padding="20dp"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white" />
+
+        <EditText
+            android:id="@+id/surname"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/name"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:autofillHints="name"
+            android:background="#30ffffff"
+            android:drawableStart="@drawable/baseline_person_24"
+            android:drawablePadding="15dp"
+            android:hint="Soyisim"
+            android:inputType="textPersonName"
+            android:padding="20dp"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white" />
+
+        <EditText
+            android:id="@+id/phone"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/surname"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:autofillHints="phone"
+            android:background="#30ffffff"
+            android:drawableStart="@drawable/baseline_phone_24"
+            android:drawablePadding="15dp"
+            android:hint="Telefon"
+            android:inputType="phone|number"
+            android:padding="20dp"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white" />
+
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/deleteButton1"
+            android:layout_width="50dp"
+            android:layout_height="65dp"
+            android:layout_below="@id/surname"
+            android:layout_marginTop="10dp"
+            android:layout_toEndOf="@id/phone"
+            android:inset="0dp"
+            android:backgroundTint="#aa0000"
+            app:icon="@drawable/baseline_delete_24"
+            app:iconSize="30dp"
+            app:iconGravity="textStart"
+            app:iconPadding="0dp" />
+
+        <EditText
+            android:id="@+id/email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/phone"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:autofillHints="emailAddress"
+            android:background="#30ffffff"
+            android:drawableStart="@drawable/baseline_email_24"
+            android:drawablePadding="15dp"
+            android:inputType="textEmailAddress"
+            android:padding="20dp"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white" />
+
+        <EditText
+            android:id="@+id/department"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/email"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="#30ffffff"
+            android:drawableStart="@drawable/baseline_school_24"
+            android:drawablePadding="15dp"
+            android:hint="Fakülte / Bölüm"
+            android:padding="20dp"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/deleteButton2"
+            android:layout_width="50dp"
+            android:layout_height="65dp"
+            android:layout_below="@id/email"
+            android:layout_marginTop="10dp"
+            android:layout_toEndOf="@id/department"
+            android:inset="0dp"
+            android:backgroundTint="#aa0000"
+            app:icon="@drawable/baseline_delete_24"
+            app:iconSize="30dp"
+            app:iconGravity="textStart"
+            app:iconPadding="0dp" />
+
+        <TextView
+            android:id="@+id/entranceYear"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_below="@id/department"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:drawablePadding="15dp"
+            android:text="Giriş Yılı:"
+            android:padding="10dp"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white"
+            android:textSize="20sp"
+            app:drawableStartCompat="@drawable/baseline_calendar_month_24" />
+
+        <Spinner
+            android:id="@+id/spinnerYear"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/department"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_toEndOf="@id/entranceYear"
+            android:background="#30ffffff"
+            android:padding="12dp"
+            android:textAlignment="center"
+            android:textColorHint="@color/white" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/deleteButton3"
+            android:layout_width="50dp"
+            android:layout_height="55dp"
+            android:layout_below="@id/department"
+            android:layout_toEndOf="@id/spinnerYear"
+            android:layout_marginTop="5dp"
+            android:inset="0dp"
+            android:backgroundTint="#aa0000"
+            app:icon="@drawable/baseline_delete_24"
+            app:iconSize="30dp"
+            app:iconGravity="textStart"
+            app:iconPadding="0dp" />
+
+        <TextView
+            android:id="@+id/accomodationState"
+            android:layout_width="136dp"
+            android:layout_height="match_parent"
+            android:layout_below="@id/entranceYear"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:drawablePadding="15dp"
+            android:text="Durum:"
+            android:padding="10dp"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white"
+            android:textSize="20sp"
+            app:drawableStartCompat="@drawable/baseline_house_24" />
+
+        <Spinner
+            android:id="@+id/spinnerState"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/entranceYear"
+            android:layout_toEndOf="@id/accomodationState"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="#30ffffff"
+            android:padding="12dp"
+            android:textAlignment="center"
+            android:textColorHint="@color/white" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/deleteButton4"
+            android:layout_width="50dp"
+            android:layout_height="55dp"
+            android:layout_below="@id/entranceYear"
+            android:layout_marginTop="5dp"
+            android:layout_toEndOf="@id/spinnerState"
+            android:inset="0dp"
+            android:backgroundTint="#aa0000"
+            app:icon="@drawable/baseline_delete_24"
+            app:iconSize="30dp"
+            app:iconGravity="textStart"
+            app:iconPadding="0dp" />
+
+        <TextView
+            android:id="@+id/sliderText"
+            android:layout_width="136dp"
+            android:layout_height="match_parent"
+            android:layout_below="@id/accomodationState"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:drawablePadding="15dp"
+            android:padding="10dp"
+            android:text="Max Uzaklık:"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white"
+            android:textSize="20sp"
+            app:drawableStartCompat="@drawable/baseline_arrow_forward_24" />
+
+        <com.google.android.material.slider.Slider
+            android:id="@+id/slider"
+            android:layout_width="150dp"
+            android:layout_height="match_parent"
+            android:layout_below="@id/accomodationState"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_toEndOf="@id/sliderText"
+            android:drawablePadding="15dp"
+            android:padding="10dp"
+            android:stepSize="0.5"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white"
+            app:labelBehavior="gone"
+            android:textSize="20sp"
+            android:valueFrom="0"
+            android:valueTo="10"
+            app:drawableStartCompat="@drawable/baseline_house_24" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/deleteButton5"
+            android:layout_width="50dp"
+            android:layout_height="55dp"
+            android:layout_below="@id/spinnerState"
+            android:layout_marginTop="5dp"
+            android:layout_alignStart="@id/deleteButton4"
+            android:layout_toEndOf="@id/slider"
+            android:inset="0dp"
+            android:backgroundTint="#aa0000"
+            app:icon="@drawable/baseline_delete_24"
+            app:iconSize="30dp"
+            app:iconGravity="textStart"
+            app:iconPadding="0dp" />
+
+
+
+        <TextView
+            android:id="@+id/sliderResult"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/slider"
+            android:layout_alignStart="@id/slider"
+            android:layout_marginStart="30dp"
+            android:layout_marginBottom="10dp"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="10.0 km"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/stayTime"
+            android:layout_width="136dp"
+            android:layout_height="match_parent"
+            android:layout_below="@id/sliderResult"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:drawablePadding="15dp"
+            android:padding="10dp"
+            android:text="Süre:"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white"
+            android:textSize="20sp"
+            app:drawableStartCompat="@drawable/baseline_access_time_24" />
+
+        <Spinner
+            android:id="@+id/spinnerTime"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/sliderResult"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_toEndOf="@id/stayTime"
+            android:background="#30ffffff"
+            android:padding="12dp"
+            android:textAlignment="center"
+            android:textColorHint="@color/white" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/deleteButton6"
+            android:layout_width="50dp"
+            android:layout_height="55dp"
+            android:layout_below="@id/sliderResult"
+            android:layout_marginTop="5dp"
+            android:layout_toEndOf="@id/spinnerYear"
+            android:inset="0dp"
+            android:backgroundTint="#aa0000"
+            app:icon="@drawable/baseline_delete_24"
+            app:iconSize="30dp"
+            app:iconGravity="textStart"
+            app:iconPadding="0dp" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/spinnerTime"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/mainbutton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="70dp"
+                android:layout_marginTop="10dp"
+                android:backgroundTint="#ffffff"
+                android:text="ANA SAYFA"
+                android:textColor="#000000" />
+
+            <Button
+                android:id="@+id/savebutton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="70dp"
+                android:backgroundTint="#a24272"
+                android:text="KAYDET"
+                android:textColor="#000000" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+</ScrollView>

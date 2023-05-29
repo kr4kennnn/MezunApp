@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "299748360755",
+    "firebase_url": "https://mezunapp-bc960-default-rtdb.europe-west1.firebasedatabase.app",
+    "project_id": "mezunapp-bc960",
+    "storage_bucket": "mezunapp-bc960.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:299748360755:android:5cd96cbb5c20d3440dd946",
+        "android_client_info": {
+          "package_name": "com.example.mezunapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "299748360755-p62oaf4h211nq02tnvmiq8dg8j240cq8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDgwTQeVcIITHHgj6j-m5ALGOkzbcRS7ss"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "299748360755-p62oaf4h211nq02tnvmiq8dg8j240cq8.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
