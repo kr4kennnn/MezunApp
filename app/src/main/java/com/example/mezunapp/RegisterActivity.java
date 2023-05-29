@@ -64,11 +64,10 @@ public class RegisterActivity extends AppCompatActivity {
         buttonReg.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                final String userIdTxt, emailTxt, nameTxt, surnameTxt, phoneTxt, departmentTxt, entranceYearTxt, accomStateTxt, durationTxt, maxDistanceTxt, passwordTxt, password2Txt;
+                String emailTxt, nameTxt, surnameTxt, phoneTxt, departmentTxt, entranceYearTxt, accomStateTxt, durationTxt, maxDistanceTxt, passwordTxt, password2Txt;
                 emailTxt = String.valueOf(editTextEmail.getText());
                 passwordTxt = String.valueOf(editTextPassword.getText());
                 password2Txt = String.valueOf(editTextPassword2.getText());
-                userIdTxt = Objects.requireNonNull(auth.getCurrentUser()).getUid();
                 nameTxt = "";
                 surnameTxt = "";
                 phoneTxt = "";
@@ -91,6 +90,7 @@ public class RegisterActivity extends AppCompatActivity {
                                     @Override
                                     public void onComplete(@NonNull Task<Void> task) {
                                         if (task.isSuccessful()){
+                                            String userIdTxt = (auth.getCurrentUser()).getUid();
                                             writeNewUser(userIdTxt,emailTxt, nameTxt, surnameTxt, phoneTxt, departmentTxt, entranceYearTxt, accomStateTxt, durationTxt, maxDistanceTxt);
                                             Toast.makeText(RegisterActivity.this, "Hesap oluşturuldu. Onay maili için gelen kutunuzu kontrol edin.", Toast.LENGTH_SHORT).show();
                                             Intent intent = new Intent(getApplicationContext(), LoginActivity.class);
