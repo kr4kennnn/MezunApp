@@ -1,2 +1,2 @@
 # MezunApp
- Android Studio Project
+ This is Semester Project for my Mobile Programming class
